@@ -404,3 +404,151 @@ if((num1%10) == (num2%10)){
 } else{
     console.log("numbers don't have the same last digit");
 }
+
+
+//========================================== Practice Conditional Statements =============================================================
+
+// FizzBuzz using if-else
+let num4 = 7;
+
+if ((num4 % 3 === 0) && (num4 % 5 === 0)) {
+  console.log("FizzBuzz");
+} else if (num4 % 3 === 0) {
+  console.log("Fizz");
+} else if (num4 % 5 === 0) {
+  console.log("Buzz");
+} else {
+  console.log(num4);
+}
+
+// FizzBuzz using nested if-else
+let num3 = 15;
+
+if (num3 % 3 === 0) {
+  if (num3 % 5 === 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log("Fizz");
+  }
+} else {
+  if (num3 % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(num3);
+  }
+}
+
+// Grading system with if-else
+let userName = prompt("Enter your name here.");
+let Grade = prompt("Enter your marks here.");
+
+if (marks >= 90) {
+  console.log("Grade: A+");
+} else if (marks >= 75 && marks <= 89) {
+  console.log("Grade: A");
+} else if (marks >= 50 && marks <= 74) {
+  console.log("Grade: B");
+} else if (marks < 50) {
+  console.log("Fail");
+} else {
+  console.log("Something is wrong");
+}
+
+// Grading system with nested if-else
+let userName1 = prompt("Enter your name here.");
+let marks1 = parseInt(prompt("Enter your marks here."));
+
+if (marks1 >= 75) {
+  if (marks1 >= 90) {
+    console.log(`${userName1} Grade: A+`);
+  } else {
+    console.log(`${userName1} Grade: A`);
+  }
+} else {
+  if (marks1 >= 50) {
+    console.log(`${userName1} Grade: B`);
+  } else if (marks1 < 50) {
+    console.log("Fail");
+  } else {
+    console.log("Something is wrong. Please enter correct credentials");
+  }
+}
+
+// FizzBuzz again using if-else
+let numbers = 15;
+
+if ((numbers % 3 == 0) && (numbers % 5 == 0)) {
+  console.log("FizzBuzz");
+} else if (numbers % 3 == 0) {
+  console.log("Fizz");
+} else if (numbers % 5 == 0) {
+  console.log("Buzz");
+} else {
+  console.log(numbers);
+}
+
+// FizzBuzz nested version
+let number2 = 90;
+
+if (number2 % 3 === 0) {
+  if (number2 % 5 == 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log("Fizz");
+  }
+} else {
+  if (number2 % 5 == 0) {
+    console.log("Buzz");
+  } else {
+    console.log(number2);
+  }
+}
+
+// Bonus based on years worked
+let years = parseInt(prompt("Enter the years you worked here"));
+
+if (years >= 10) {
+  console.log(`Year ${year}, 50000 RS. bonus`);
+} else if (years >= 5) {
+  console.log(`Year ${years}, 2000 RS. bonus`);
+} else {
+  console.log(`Year ${years}, 500 RS. bonus`);
+}
+
+// Switch statement for day of week
+let dayNumber = parseInt(prompt("Enter day number"));
+
+switch (dayNumber) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  case 5:
+    console.log("Friday");
+    break;
+  case 6:
+    console.log("Saturday");
+    break;
+  case 7:
+    console.log("Sunday");
+    break;
+  default:
+    console.log("Invalid day");
+}
+
+// Password strength checker
+let password = prompt("Password:");
+
+if ((password[0] === "@" || password[0] === "#") && password.length >= 8) {
+  console.log("Strong");
+} else {
+  console.log("Weak");
+}
