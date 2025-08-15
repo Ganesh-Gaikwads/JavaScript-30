@@ -1,4 +1,4 @@
-/*
+
 
 //================================String Methods Practice =================================
 
@@ -416,7 +416,10 @@ let NewStr = "vwxyz";
  let newPass = ( pass[0]==="@" || pass[0]==="#") && (pass.length >=8);
  console.log(`Is Password strong :${newPass}`);
 
- */ 
+ *
+
+
+ 
 
  //================================== Conditional Statements Problems=====================
 
@@ -600,8 +603,8 @@ if((str[0]==="A" || str[0]==="a") && str.length>=5){
 
  }
 
- } */
-
+ } 
+*/
 
   // 13. check password start with @/# and length>8  (Strong/weak).
 
@@ -642,8 +645,183 @@ switch(day){
 
     }
 
+     
 // 15. Switch Statement : print the quarter based on month
- 
+
+ let  Month = 11;
+
+ switch(true){
+    case Month>=1 && Month <=3:
+      console.log("Quarter : 1");
+      break;
+    case Month>=4 && Month<=6:
+      console.log("Quarter : 2");
+      break;
+    case Month >=7 && Month<=9:
+      console.log("Quarter : 3");
+      break;
+    case Month>=10 && Month <=12:
+      console.log("Quarter : 4");
+      break;
+    default:
+      console.log("Please Enter Correct Months number.");
+
+ }
+
+ // 16. check number is in range  1 -100
+   let digit = 11;
+   if(digit>=1 && digit<=100){
+    console.log(`${digit}: Number is in range of 1-100`);
+   } else {
+        console.log("Not in range 1-100.");
+   }
+
+
+   // 17. ticket price based on age:
+   //nested version
+    let CustomerAge = 19;
+
+     if(CustomerAge>=10){
+      if(CustomerAge>=18){
+        console.log("Price:250");
+      }
+      else {
+        console.log("Price:150");
+      }
+     }else{
+      console.log("Free show.");
+     }
+
+
+     //short version 
+     if(CustomerAge>=18){
+      console.log("Price:250");
+     } else if(CustomerAge>=10){
+      console.log("Price:150");
+     } else{
+      console.log("Free show");
+     }
+
+     // 18. truthy falsy .
+
+     let input = "srt";
+
+     if(input!==true){
+      console.log("false");
+     } else {
+      console.log("true");
+     }
+
+     // 19. print season based on month
+
+     let months = 5;
+
+     if(months>=1 && months <=4){
+      console.log("Summer");
+     } else if(months>=5 && months <=8){
+      console.log("spring");
+     } else if(months >=9 && months<=12){
+      console.log("Winter");
+     } else{
+      console.log(" something is Wrong! ");
+     }
+
+     // 20. combine multiple conditions (eg. age, marks , and attendance)
+
+     let age =22 ;
+     let mark = 86;
+     let attendance = 79;
+
+     if( age>=21 && attendance>=75){
+      if(mark >=85 ){
+        console.log("Approved for next Round");
+      } else{
+        console.log("Try again, you can do it .");
+      }
+     } else{
+      console.log("You are not eligible for exam. ");
+     }
+
+     
+
+     //================================ Arrays ===============================================
+
+     // 1.create an array of fruits 
+
+     let fruit = ["mango ","apple","strawberry","watermelon","chikoo"];
+
+     // 2. Access the first element
+
+     console.log(fruit[0]);
+
+     // 3. replace an element in array
     
-    
-    
+     let newFruits =fruit.splice(0,1,"Peru");
+    console.log(fruit);
+
+    // 4. add element to end 
+    console.log(fruit.push("banana"));
+    console.log(fruit);
+
+    // 5. remove the last element 
+
+    fruit.pop();
+    console.log(fruit);
+
+    // 6. add element at the beginning
+    fruit.unshift("carrot");
+    console.log(fruit);
+
+    // 7. remove first element 
+      fruit.shift();
+      console.log(fruit);
+
+   // 8. find the index of an element
+
+    console.log(fruit.indexOf("watermelon"));
+
+  // 9. check element exist use include();
+  console.log(fruit.includes("chikoo"));
+
+  // 10. merge two arrays
+  let primary = [1,2,3,4,5,8,7,6,7];
+  let secondary=[8,9,,0,11,1,3,14];
+
+  console.log(primary.concat(secondary));
+   
+  // 11. reverse an array.
+
+  console.log(primary.reverse());
+
+  // 12. slice an array
+  console.log(fruit.slice(2,5));
+
+  // 13. splice an array to remove 2 element form index one
+     newarr =fruit.splice(1,3)
+    console.log(newarr);
+
+
+// 14. splice an array to add 2 elements at index 1
+
+  console.log(newarr.splice(1,0,"kakadi","bit"));
+  console.log(newarr);
+
+  // 15. sort array of numbers
+console.log(secondary.sort());
+
+// 16. sort an array of string 
+console.log(newarr.sort());
+
+// 17. create nested array 2d
+
+let array = [[1,2],[3,4]];
+console.log(array);
+
+//18.access an element form nested array
+console.log(array[1][1]);
+
+//19. count elements in array
+console.log(array.length);
+
+// remove duplicates from array
+ console.log(... new Set(primary));
